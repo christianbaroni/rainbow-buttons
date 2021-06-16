@@ -1,7 +1,7 @@
 html, body {
 		-webkit-font-smoothing: antialiased;
-		background: #000000;
-		/* background: #131415; */
+		/* background: #000000; */
+		background: #131415;
 		/* background: #222222; */
 		/* background: #ffffff; */
     height: 100%;
@@ -50,7 +50,9 @@ html, body {
 		transition: 0.125s ease;
 	}
 	#rainbow-button-inner:before {
-		background: rgba(0, 0, 0, 1);
+		-webkit-backdrop-filter: saturate(5);
+		backdrop-filter: saturate(5);
+		background: rgba(0, 0, 0, 0.85);
 		border-radius: 16px;
 		content: "";
 		height: 100%;
@@ -65,7 +67,7 @@ html, body {
 	#rainbow-button:hover #rainbow-button-inner:before {
 		-webkit-backdrop-filter: saturate(5);
 		backdrop-filter: saturate(5);
-		background: rgba(0, 0, 0, 0.85);
+		background: rgba(0, 0, 0, 0.925);
 	}
 	#rainbow-button-inner:after {
 		animation: animatedgradient 80s ease-in-out alternate infinite;
@@ -114,10 +116,10 @@ html, body {
 	
 	@media (color-gamut: p3) {
 		#rainbow-button-inner:before {
-			background: color(display-p3 0 0 0);
+			background: color(display-p3 0 0 0 / 85%);
 		}
 		#rainbow-button:hover #rainbow-button-inner:before {
-			background: color(display-p3 0 0 0 / 85%);
+			background: color(display-p3 0 0 0 / 92.5%);
 		}
 		#rainbow-button-inner:after {
 			background: linear-gradient(315deg, color(display-p3 0.09020 0.25882 0.6) 0%, color(display-p3 0.11765 0.85882 0.68235) 9.09%, color(display-p3 0 0.69804 1) 18.18%, color(display-p3 0.62353 0.29804 0.92941) 27.27%, color(display-p3 0.81569 0.29804 0.65098) 36.36%, color(display-p3 0 0.70980 0.83529) 45.45%, color(display-p3 0.09020 0.25882 0.6) 54.54%, color(display-p3 0 0.71373 0.81176) 63.63%, color(display-p3 0 0.83529 0.43529) 72.72%, color(display-p3 0.0902 0.25882 0.6) 81.81%, color(display-p3 0.00392 0.73725 0.83529) 90.9%, color(display-p3 0.09020 0.25882 0.6) 100%);
@@ -133,11 +135,11 @@ html, body {
 			transform: scale(0.92) !important;
 		}
 		#rainbow-button:hover #rainbow-button-inner:before {
-			background: rgba(0, 0, 0, 1);
+			background: rgba(0, 0, 0, 0.85);
 		}
 		@media (color-gamut: p3) {
 			#rainbow-button:hover #rainbow-button-inner:before {
-				background: color(display-p3 0 0 0);
+				background: color(display-p3 0 0 0 / 85%);
 			}
 		}
 	}
