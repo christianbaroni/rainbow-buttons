@@ -135,15 +135,9 @@ html, body {
 		#rainbow-button:hover #rainbow-button-inner:before {
 			background: rgba(0, 0, 0, 1);
 		}
-		#rainbow-button:active #rainbow-button-inner:before {
-			background: rgba(0, 0, 0, 0.85) !important;
-		}
 		@media (color-gamut: p3) {
 			#rainbow-button:hover #rainbow-button-inner:before {
 				background: color(display-p3 0 0 0);
-			}
-			#rainbow-button:active #rainbow-button-inner:before {
-				background: color(display-p3 0 0 0 / 85%) !important;
 			}
 		}
 	}
