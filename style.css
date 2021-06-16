@@ -132,13 +132,18 @@ html, body {
 			transform: scale(1);
 		}
 		#rainbow-button:active {
-			transform: scale(0.92) !important;
+			transform: scale(0.875) !important;
 		}
 		#rainbow-button:hover #rainbow-button-inner:before {
+			-webkit-backdrop-filter: saturate(5);
+			backdrop-filter: saturate(5);
 			background: rgba(0, 0, 0, 0.85);
 		}
 		#rainbow-button:active #rainbow-button-inner:before {
+			-webkit-backdrop-filter: saturate(5);
+			backdrop-filter: saturate(5);
 			background: rgba(0, 0, 0, 0.925);
+			transition: none;
 		}
 		@media (color-gamut: p3) {
 			#rainbow-button:hover #rainbow-button-inner:before {
