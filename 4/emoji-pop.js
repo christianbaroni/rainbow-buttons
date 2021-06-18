@@ -60,7 +60,7 @@ class Fountain {
   createParticle() {
     const size = this.sizes[Math.floor(Math.random() * this.sizes.length)];
     const speedHorz = Math.random() * 7;
-    const speedUp = Math.random() * 25;
+    const speedUp = Math.random() * 35;
     const spinVal = Math.random() * 360;
     const spinSpeed = Math.random() * 25 * (Math.random() <= 0.5 ? -1 : 1);
     const top = this.mouseY - size / 2;
